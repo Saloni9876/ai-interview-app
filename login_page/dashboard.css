@@ -1,0 +1,101 @@
+body{
+    background-color: rgba(137, 43, 226, 0.959);
+    text-align: center;
+    padding:50px 150px 100px 350px;
+    overflow: hidden;
+    max-width: 750px;
+}
+/* @media (width < 750px){
+    .form_container{
+    grid-template-columns: repeat(2,1fr);}
+} */
+.form_container {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding-right: 50px; 
+}
+.container {
+    display: flex;
+    /* text-align: center; */
+    margin-top: 100px;
+    height: 100vh;
+}
+.login-box{
+    justify-content: center;
+    align-items: center;
+    width:350px;
+    max-width: 90%;
+    border-radius: 10px;
+    /* text-align: center; */
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    padding:30px;
+    background-color: white;
+}
+/* #reset-form{
+    text-align: center;
+} */
+.email{ 
+    padding:0;
+    text-align:left;
+}
+.email_box{
+    width:100%;
+    border-radius:5px;
+    border: none;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    height:15px;
+    padding:10px;
+    font-size: 13px;
+}
+.email_box:hover{
+    width:100%;
+    border-radius:5px;
+    border: none;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+    height: 15px;
+    padding:10px;
+    font-size: 13px;
+}
+.password{ 
+    padding:0;
+    text-align:left;
+}
+.password i{
+    color: black;
+}
+.password_box{
+    width:100%;
+    border-radius:5px;
+    border: none;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    height:15px;
+    padding:10px;
+    font-size: 13px;
+}
+.password_box:hover{
+    width:100%;
+    border-radius:5px;
+    border: none;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+    height:15px;
+    padding:10px;
+    font-size: 13px;
+}
+.cnt_btn {
+    background-color:black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+.cnt_btn:hover {
+    opacity:1;
+}

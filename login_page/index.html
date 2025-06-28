@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTalk AI</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="container">
+      <div class="close_btn" id="cls-btn">
+        <label for="check" style="color: grey">
+          <i class="fa-solid fa-xmark"></i>
+        </label>
+      </div>
+        <div class="left-section">
+            <h1>Welcome to AI interview mocker!</h1>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus et iusto adipisci facilis rerum! Incidunt odio, quos quibusdam itaque voluptates et! Fugiat iure similique, dolorum officia dolorem quo molestiae velit.</p> -->
+        </div>
+        <div class="form_container">
+              <div class="login-box">
+                <h2>Log in to AI interview mocker</h2>
+                <p>Welcome back! Please sign in to continue</p>
+               <!-- <div class="btn">
+                <button class="facebook_btn"> <img src="Facebook-Logo.png" alt="" height="14" width="21"> Facebook </button>
+                <button class="google_btn"> <img src="Google_logo.png" alt="" height="14" width="15"> Google </button>
+               </div> -->
+               <!-- <div class="line">
+                <p><hr class="hr" width="50%" position="left"> or
+                <hr class="hr" width="50%" position="right"> </p>
+               </div> -->
+              <div class="email">
+                <h4>Email address</h4>
+                <input type="email" class="email_box" placeholder="enter your email"> 
+              </div>
+              <div class="password">
+                <h4>Password</h4>
+                <input type="password" class="password_box" placeholder="enter your password"/> 
+                <i class="uil uil-eye-slash password"></i>
+              </div>
+              <div class="opt_field">
+                <span classs="checkbox">
+                    <input type="checkbox" id="check">
+                    <label for="check">Remember me</label>
+                </span>
+                <a href="reset-password.html" class="forget-pwd">Forget password ?</a>
+              </div><br>
+              <button class="cnt_btn" onclick="continueToDashboard()"> Continue <i class="fa-solid fa-play"></i></button>
+             <br><br> <hr>
+             <p class="signup_text">Don't have an account? <a href="#" id="signup">Sign Up</a></p>
+            </div>
+            <!-- SignUp form  -->
+            <div class="signup-box">
+                <h2>Sign up to AI interview mocker</h2>
+                <p>Welcome back! Please sign up to continue</p>
+               
+              <div class="email">
+                <h4>Email address</h4>
+                <input type="email" class="email_box" placeholder="enter your email"> 
+              </div>
+              <div class="password">
+                <h4>Password</h4>
+                <input type="password" class="password_box" placeholder="enter your password"/> 
+                <i class="uil uil-eye-slash password"></i>
+                <br> <br>
+                <input type="password" class="password_box" placeholder="confirm password"/> 
+                <i class="uil uil-eye-slash password"></i>
+              </div>
+             <br>
+              <button class="cnt_btn" onclick="handleSignup()"> Continue <i class="fa-solid fa-play"></i></button>
+             <br><br> <hr>
+             <p class="signup_text">Already have an account? <a href="#" id="login"> Log in </a></p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

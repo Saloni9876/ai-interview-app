@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="dashboard.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">          
+        <h1 style="color:white;">Dashboard</h1>
+        <p>Create and start your AI mock interview </p>
+        <!-- <button class="add-new">+ Add New</button> -->
+    </div>
+    <!-- <h1>Generate Questions</h1> -->
+
+    <div class="container">
+      <h2 class="mb-4 text-center">✨ AI Interview Question Generator</h2>
+    
+      <div class="mb-3">
+        <input type="email" id="email" class="form-control" placeholder="Enter your email" />
+      </div> <br>
+    
+      <div class="mb-3">
+        <p> <b>Select your domain </b></p>
+        <select id="domain" class="form-select">
+          <option value="Java">Java</option>
+          <option value="Python">Python</option>
+          <option value="DSA">DSA</option>
+          <option value="Web development">Web development</option>
+        </select>
+      </div>
+     <br>
+      <div class="text-center mb-4">
+        <button class="btn btn-light" onclick="generateQuestionSet()">🔍 Generate Question</button>
+      </div>
+    <br>
+      <div id="questionBox" class="mb-3" style="font-weight: bold;"></div>
+    <br>
+      <div class="mb-3">
+        <textarea id="answer" placeholder="Type your answer here..."></textarea>
+      </div>
+     <br>
+      <div class="text-center">
+        <button class="btn btn-success" onclick="submitCurrentAnswer()">✅ Submit Answer & Get Feedback</button>
+      </div>
+    <br>
+      <div id="feedbackBox" class="mt-4"></div> <br>
+      <div class="text-center mt-4">
+        <a href="feedback-dashboard.html" class="btn btn-outline-light" style="color:white">📋 View My Feedback</a>
+      </div>
+      
+    </div>
+ 
+    <script src="dashboard.js"></script>
+</body>
+</html>

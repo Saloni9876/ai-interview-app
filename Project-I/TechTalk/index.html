@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>TechTalk</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="#" class="logo">Tech<span>Talk</span></a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a href=#home>Home</a></li>
+            <li><a href=#about>About</a></li>
+            <li><a href=#courses>Courses</a></li>
+            <li><a href=#services>Services</a></li>
+            <li><a href=#contact>Contact</a></li>
+            <li><button class="btn" onclick="redirectToLogin()">Log in</button></li>
+            <!-- <li><button class="btn">Sign up</button></li> -->
+        </ul>
+    </nav>
+
+
+    <header class="section__container header__container" id="home">
+        <img src="images/google.png" alt="header">
+        <img src="images/twitter.png" alt="header">
+        <img src="images/amazon.png" alt="header">
+        <img src="images/figma.png" alt="header">
+        <img src="images/linkedin.png" alt="header">
+        <img src="images/microsoft.png" alt="header">
+         <h2>
+            <img src="images/bag.png" alt="bag" />
+            No.1 Mock Interview Platform
+         </h2>
+         <h1>Transform Your Skills ,<br/>Empower Your Career &<span>Reach Your Goals</span></h1>
+         <p>
+            Your journey begins now. Explore endless opportunities, take the first step by 
+            enrolling in courses that align with your skills and dreams, and shape the future of your career. 
+         </p>
+         <div class="header__btns">
+            <button class="btn">Browse Jobs</button>
+            <a href="#" >
+                <span><i class="ri-play-fill"></i></span>
+                How It Works?
+            </a>
+         </div>
+    </header>
+
+    <section class="steps" id="about">
+        <div class="section__container steps__container">
+            <h2 class="section__header">
+                Get Hired in 4 <span>Quick Easy Steps</span>
+            </h2>
+            <p class="section__description">
+                Follow Our Simple,Step-by-Step Guide to Quickly Land Your Dream Job 
+                and Start your New Career Journey.
+            </p>
+            <div class="steps__grid">
+                <div class="steps__card">
+                    <span><i class="ri-user-fill"></i></span>
+                    <h4>Create an Account</h4>
+                    <p>
+                        Sign up with just a few clicks to unlock exclusive access to a world of job opportunities
+                        and landing your drean job by practicing interview questions.It's quick,
+                        easy and completely free.
+
+                    </p>
+                </div>
+                <div class="steps__card">
+                    <span><i class="ri-search-fill"></i></span>
+                    <h4>Search Course</h4>
+                    <p>
+                        Select the areas you want to focus on (e.g., Data Structure and Algorithm,Web Development,Python etc). 
+                        This helps you prepare for the specific job roles you're targeting. 
+
+                    </p>
+                </div>
+                <div class="steps__card">
+                    <span><i class="ri-question-answer-fill"></i></span>
+                    <h4>Practice with Mock Interview Questions</h4>
+                    <p>
+                        This step is all about simulating the actual interview environment by answering 
+                        questions you’re likely to face in your job interview. 
+                        The idea is to help you build confidence, improve your responses, and familiarize yourself 
+                        with the interview process.
+                    </p>
+                </div>
+                <div class="steps__card">
+                    <span><i class="ri-feedback-fill"></i></span>
+                    <h4>Review Feedback & Improve</h4>
+                    <p>
+                        After each practice session, review feedback on your answers, communication, and
+                         
+                        performance. Use this to continuously improve until you're ready for the real interview!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section__container explore__container">
+        <h2 class="section__header">
+            <span>Countless Career Options</span> Are waiting For You To Explore
+        </h2>
+        <p class="section__description">
+            Discover a World of Exciting Opportunities and Endless Possibilities 
+            and Find the Perfect Career Path to Shape Your Future.
+        </p>
+        <div class="explore__grid">
+            <div class="explore__card">
+                <span><i class="ri-pencil-ruler-2-fill"></i></span>
+                <h4>Design</h4>
+                <p>200+ jobs openings</p>
+            </div>
+            <div class="explore__card">
+                <span><i class="ri-bar-chart-box-fill"></i></span>
+                <h4>Sales</h4>
+                <p>350+ jobs openings</p>
+            </div>
+            <div class="explore__card">
+                <span><i class="ri-megaphone-fill"></i></span>
+                <h4>Marketing</h4>
+                <p>500+ jobs openings</p>
+            </div>
+            <div class="explore__card">
+                <span><i class="ri-wallet-3-fill"></i></span>
+                <h4>Finance</h4>
+                <p>200+ jobs openings</p>
+            </div>
+            <div class="explore__card">
+                <span><i class="ri-car-fill"></i></span>
+                <h4>Automobile</h4>
+                <p>250+ jobs openings</p>
+            </div>
+            <div class="explore__card">
+                <span><i class="ri-truck-fill"></i></span>
+                <h4>Logistics/Delivery</h4>
+                <p>1K+ jobs openings</p>
+            </div>
+            <div class="explore__card">
+                <span><i class="ri-computer-fill"></i></span>
+                <h4>Admin</h4>
+                <p>100+ jobs openings</p>
+            </div>
+            <div class="explore__card">
+                <span><i class="ri-building-fill"></i></span>
+                <h4>Construction</h4>
+                <p>500+ jobs openings</p>
+            </div>
+        </div>
+        <div class="explore__btn">
+            <button class="btn">View All Categories</button> 
+        </div>
+    </section>
+
+    <section class="section__container course__container" id="course">
+        <h2 class="section__header"><span>Latest & Top</span>Courses</h2>
+        <p class="section__description">
+            Explore the Latest Courses and Unlock Exciting New Mock Interview Opportunities 
+            to Sharpen Your Skills for Top Roles in Leading Industries.
+        </p>
+
+        <div class="course__grid">
+            <div class="course__card">
+                <div class="course__card__header">
+                    <img src="images/full-stack-1.jpg" alt="course">
+                    <div>
+                        <h5>Web Dev.</h5>
+                    </div>
+                </div>
+                <h4>Full Stack Developer</h4>
+                <p>
+                    Prepare for Success with Mock Interviews Tailored for Full Stack Developers,
+                    Featuring Real-World Scenarios from Leading Tech Companies.
+                </p>
+                <div class="course__card__footer">
+                    <span>Rs.3000</span>
+                </div>
+            </div>
+            <div class="course__card">
+                <div class="course__card__header">
+                    <img src="images/frontend.jpg" alt="course">
+                    <div>
+                        <h5>Web Dev.</h5>
+                    </div>
+                </div>
+                <h4>Full Stack Frontend Developer</h4>
+                <p>
+                    Unlock Your Frontend Developer Potential with Real-World Mock Interviews.It will be helping you to prepare for the toughest
+                    interviews at top tech companies with real-world scenarios and expert feedback.
+                </p>
+                <div class="course__card__footer">
+                    <span>Rs.2000</span>
+                </div>
+            </div>
+            <div class="course__card">
+                <div class="course__card__header">
+                    <img src="images/java.png" alt="course">
+                    <div>
+                        <h5>Java</h5>
+                    </div>
+                </div>
+                <h4>Backend Java Developer</h4>
+                <p>
+                    Prepare for success with real-world mock interviews tailored for Backend Java Developers,
+                    featuring  challenges and expert feedback.
+                </p>
+                <div class="course__card__footer">
+                    <span>Rs.3500</span>
+                </div>
+            </div>
+            <div class="course__card">
+                <div class="course__card__header">
+                    <img src="images/python.png" alt="course">
+                    <div>
+                        <h5>Python</h5>
+                    </div>
+                </div>
+                <h4>Python Full Stack Developer</h4>
+                <p>
+                    Elevate your career with mock interviews crafted for Python Full Stack Developers,
+                    Featuring Real-World Scenarios from Leading Tech Companies.
+                </p>
+                <div class="course__card__footer">
+                    <span>Rs.3000</span>
+                </div>
+            </div>
+            <div class="course__card">
+                <div class="course__card__header">
+                    <img src="images/ds.jpg" alt="course">
+                    <div>
+                        <h5>DSA</h5>
+                    </div>
+                </div>
+                <h4>Data Structure and Analysis</h4>
+                <p>
+                    Master data structures and algorithms with mock interviews and real-world challenges designed to 
+                    strengthen your problem-solving skills. Gain in-depth analysis and 
+                    feedback to excel in technical interviews at top tech companies!
+                </p>
+                <div class="course__card__footer">
+                    <span>Rs.4000</span>
+                </div>
+            </div>
+            <div class="course__card">
+                <div class="course__card__header">
+                    <img src="images/angular.png" alt="course">
+                    <div>
+                        <h5>Angular</h5>
+                    </div>
+                </div>
+                <h4>Full Stack Angular Developer</h4>
+                <p>
+                    Boost your career with mock interviews tailored for Full Stack Angular Developers, covering both frontend and 
+                    backend challenges and real-world scenarios. 
+                    
+                </p>
+                <div class="course__card__footer">
+                    <span>Rs.4500</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="section__container offer__container" id="service">
+        <h2 class="section__header">What We <span>Offer</span></h2>
+        <p class="section__description">
+            Explore the Benefits and Services We Provide to Enhance Your Job
+            and Careeer Success
+        </p>
+        <div class="offer__grid">
+            <div class="offer__card">
+                <img src="images/offer1.png" alt="offer">
+                <div class="offer__details">
+                    <span>01</span>
+                    <div>
+                        <h4>Mock Interview Simulations</h4>
+                        <p>
+                            Techtalk provides tailored mock interviews for various roles and courses, covering both technical and 
+                            behavioral questions to help users prepare for real-world job interviews.
+                        </p>
+                    </div>
+                </div>
+            </div>
+       
+            <div class="offer__card">
+              <img src="images/offer2.png" alt="offer">
+              <div class="offer__details">
+                <span>02</span>
+                <div>
+                    <h4>Personalized Feedback & Career Coaching</h4>
+                    <p>
+                        After each mock interview, users receive detailed feedback to identify strengths and areas for improvement, 
+                        along with career guidance and mentorship to help them progress in their chosen field.
+                    </p>
+                </div>
+              </div>
+            </div>
+    <div class="offer__card">
+        <img src="images/offer3.png" alt="offer">
+        <div class="offer__details">
+            <span>03</span>
+            <div>
+                <h4>Interactive Skill-Building Challenges</h4>
+                <p>
+                    Engage in hands-on coding challenges, design exercises, and real-world problem-solving tasks tailored to your field. 
+                    These challenges help sharpen your skills and ensure you're ready for the demands of actual job roles.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    </section>
+
+    <footer class="footer">
+        <div class="section_container footer_container">
+            <div class="footer__col">
+                <div class="footer__logo">
+                    <a href="#" class="logo">Tech<span>Talk</span></a>
+                </div>
+                <p>
+                    Our paltform is designed to help you find the perfect mock interview platform and 
+                    achieve your professional dreams.
+                </p>
+            </div>
+            <div class="footer__col">
+                <h4>Follow Us</h4>
+                <ul class="footer__links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4>Follow Us</h4>
+                <ul class="footer__links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Youtube</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Contact Us</h4>
+                <ul class="footer__links">
+                    <li>
+                        <a href="#">
+                            <span><i class="ri-phone-fill"></i></span> +91 342 67889
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="ri-map-pin-2-fill"></i></span> 67 Main Street,Modal Town,Delhi
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+   
+    </footer>
+
+    </div>
+            <div class="footer__col">
+                <h4>Contact Us</h4>
+                <ul class="footer__links">
+                    <li>
+                        <a href="#">
+                            <span><i class="ri-phone-fill"></i></span> +91 342 67889
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="ri-map-pin-2-fill"></i></span> 67 Main Street,Modal Town,Delhi
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+   
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js">
+    </script>
+    <script>
+    function redirectToLogin(){
+        window.location.href="../login_page/index.html";
+    }
+    </script>
+</body>
+</html>

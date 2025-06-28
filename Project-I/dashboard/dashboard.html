@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="dashboard.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">          
+        <h1 style="color:white;">Dashboard</h1>
+        <p>Create and start your AI mock interview </p>
+        <button class="add-new">+ Add New</button>
+    </div>
+    <!-- <h1>Generate Questions</h1> -->
+    <div class="container text-center">
+      <h2 class="mb-4">💡 Generate Interview Questions</h2>
+      <div class="mb-3">
+        <p>Select your domain</p>
+        <select id="domainSelect" class="form-select">
+          <option value="Java">Java</option>
+          <option value="Python">Python</option>
+          <option value="DSA">Data Structures</option>
+          <option value="Web Development">Web Development</option>
+        </select>
+      </div> <br>
+      <button class="btn btn-light" onclick="generateQuestions()">✨ Generate</button>
+      <div id="output" class="mt-4 text-start"></div>
+    </div>
+
+    <h2>🗣 Submit Your Answer for Feedback</h2>
+<textarea id="answer" placeholder="Type your interview answer here..."></textarea>
+<br>
+<button onclick="getFeedback()">Get Feedback</button>
+
+<div id="feedbackBox"></div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
