@@ -3,7 +3,18 @@ const express = require('express');
 const axios = require('axios');
 const dotenv = require('dotenv');
 const cors = require('cors');
-const mysql = require('mysql2');
+const mysql = require('mysql2/promise');
+const pool = mysql.createPool({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT || 3306,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+});
+
 const path = require('path');
 
 dotenv.config();
@@ -39,39 +50,84 @@ db.connect(err => {
 
 
 // ✅ Signup route
-app.post('/api/signup', (req, res) => {
-  const { email, password } = req.body;
+// app.post('/api/signup', (req, res) => {
+//   const { email, password } = req.body;
 
-  if (!email || !password) {
-    return res.status(400).json({ error: "Email and password are required" });
-  }
+//   if (!email || !password) {
+//     return res.status(400).json({ error: "Email and password are required" });
+//   }
 
-  db.query('SELECT * FROM users WHERE email = ?', [email], (err, results) => {
-    if (err) return res.status(500).json({ error: "Database error" });
+//   db.query('SELECT * FROM users WHERE email = ?', [email], (err, results) => {
+//     if (err) return res.status(500).json({ error: "Database error" });
 
-    if (results.length > 0) {
-      return res.status(409).json({ error: "User already exists" });
+//     if (results.length > 0) {
+//       return res.status(409).json({ error: "User already exists" });
+//     }
+
+//     db.query('INSERT INTO users (email, password) VALUES (?, ?)', [email, password], (err) => {
+//       if (err) return res.status(500).json({ error: "Failed to register user" });
+//       return res.status(200).json({ message: "Signup successful" });
+//     });
+//   });
+// });
+
+app.post("/api/signup", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // 1️⃣ Check if email already exists
+    const [rows] = await pool.query("SELECT * FROM users WHERE email = ?", [email]);
+    if (rows.length > 0) {
+      return res.status(400).json({ error: "Email already registered" });
     }
 
-    db.query('INSERT INTO users (email, password) VALUES (?, ?)', [email, password], (err) => {
-      if (err) return res.status(500).json({ error: "Failed to register user" });
-      return res.status(200).json({ message: "Signup successful" });
-    });
-  });
+    // 2️⃣ Insert new user
+    await pool.query("INSERT INTO users (email, password) VALUES (?, ?)", [email, password]);
+    res.json({ message: "Signup successful! You can now log in." });
+
+  } catch (err) {
+    console.error("Signup Error:", err);
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
 
 // ✅ Login route
-app.post('/api/login', (req, res) => {
-  const { email, password } = req.body;
+// app.post('/api/login', (req, res) => {
+//   const { email, password } = req.body;
 
-  if (!email || !password) return res.status(400).json({ error: "Email and password required" });
+//   if (!email || !password) return res.status(400).json({ error: "Email and password required" });
 
-  db.query('SELECT * FROM users WHERE email = ? AND password = ?', [email, password], (err, results) => {
-    if (err) return res.status(500).json({ error: "DB error" });
-    if (results.length === 0) return res.status(401).json({ error: "Invalid email or password" });
+//   db.query('SELECT * FROM users WHERE email = ? AND password = ?', [email, password], (err, results) => {
+//     if (err) return res.status(500).json({ error: "DB error" });
+//     if (results.length === 0) return res.status(401).json({ error: "Invalid email or password" });
 
-    res.status(200).json({ message: "Login successful" });
-  });
+//     res.status(200).json({ message: "Login successful" });
+//   });
+// });
+
+app.post("/api/login", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // 1️⃣ Check if email exists
+    const [rows] = await pool.query("SELECT * FROM users WHERE email = ?", [email]);
+    if (rows.length === 0) {
+      return res.status(401).json({ error: "Invalid email or password" });
+    }
+
+    const user = rows[0];
+
+    // 2️⃣ Compare passwords (⚠️ for production use bcrypt)
+    if (user.password !== password) {
+      return res.status(401).json({ error: "Invalid email or password" });
+    }
+
+    res.json({ message: "Login successful", user: { email: user.email } });
+
+  } catch (err) {
+    console.error("Login Error:", err);
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
 
 
